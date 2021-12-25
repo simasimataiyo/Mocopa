@@ -1,0 +1,19 @@
+{
+    "_saveModulesList": [
+        {
+            "prefabPath": "Prefabs/Modules/Button",
+            "position": {
+                "x": -0.025126488879323007,
+                "y": 0.8752108216285706,
+                "z": -4.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "oscMessage": "/btn"
+        }
+    ]
+}
