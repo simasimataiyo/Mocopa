@@ -18,7 +18,7 @@ Blender用アドオン[I/F Joiner](https://github.com/simasimataiyo/IFJoiner)と
 # Install
 <img src="readme_images/home_image.png">
 
-Android端末で[Releases Page]()にアクセスし，.apkファイルをダウンロードしてください．
+Android端末で[Releases Page](https://github.com/simasimataiyo/Mocopa/releases)にアクセスし，.apkファイルをダウンロードしてください．
 
 「ファイル」アプリでMocopa.apkをタップするとインストールが始まります．
 
@@ -121,9 +121,9 @@ IP AddressにはBlenderが起動しているPCのIPアドレスを，Port Number
 
 ### OSCメッセージ
 - ノブをタップしたとき
-  - ( /address_pattern, knob_position[0.0~1.0] )
+  - ( /address_pattern, knob_position(0.0~1.0) )
 - ノブをドラッグしている間
-  - ( /address_pattern, knob_position[0.0~1.0] )
+  - ( /address_pattern, knob_position(0.0~1.0) )
   
 ## Rotary Encoder
 <img src="Assets/Textures/module_thumbnails/rotary.png">
@@ -134,15 +134,15 @@ IP AddressにはBlenderが起動しているPCのIPアドレスを，Port Number
 
 ### OSCメッセージ
 - 針に触れたとき
-  - ( /address_pattern, Angle[-180.0~180.0], 0.0, 1.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), 0.0, 1.0 )
 - 針のドラッグ開始時
-  - ( /address_pattern, Angle[-180.0~180.0], 0.0, 2.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), 0.0, 2.0 )
 - 針をドラッグしている間
-  - ( /address_pattern, Angle[-180.0~180.0], delta_angle[-180.0~180.0], 0.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), delta_angle(-180.0~180.0), 0.0 )
 - 針のドラッグ終了時
-  - ( /address_pattern, Angle[-180.0~180.0], delta_angle[-180.0~180.0], 3.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), delta_angle(-180.0~180.0), 3.0 )
 - 針から指を離したとき
-  - ( /address_pattern, Angle[-180.0~180.0], 0.0, 4.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), 0.0, 4.0 )
 
 ## Joystick
 <img src="Assets/Textures/module_thumbnails/joystick.png">
@@ -152,21 +152,21 @@ IP AddressにはBlenderが起動しているPCのIPアドレスを，Port Number
 
 ### OSCメッセージ
 - スティックに触れたとき
-  - ( /address_pattern, Angle[-180.0~180.0], distance[0.0~1.0], 1.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 1.0 )
 - スティックのドラッグ開始時
-  - ( /address_pattern, Angle[-180.0~180.0], distance[0.0~1.0], 2.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 2.0 )
 - スティックをドラッグしている間
-  - ( /address_pattern, Angle[-180.0~180.0], distance[0.0~1.0], 0.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 0.0 )
 - スティックのドラッグ終了時
-  - ( /address_pattern, Angle[-180.0~180.0], distance[0.0~1.0], 3.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 3.0 )
 - スティックから指を離したとき
-  - ( /address_pattern, Angle[-180.0~180.0], distance[0.0~1.0], 4.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 4.0 )
   
 特殊な挙動として，距離が0.2になった瞬間にだけ送信するメッセージがあります．
 - ひとつ前に送信した距離 ≦ 0.2 ≦ 現在の距離 のとき
-  - ( /address_pattern, Angle[-180.0~180.0], distance[0.0~1.0], 5.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 5.0 )
 - 現在の距離 ≦ 0.2 ≦ ひとつ前に送信した距離 のとき 
-  - ( /address_pattern, Angle[-180.0~180.0], distance[0.0~1.0], 6.0 )
+  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 6.0 )
   
 
 # Others
