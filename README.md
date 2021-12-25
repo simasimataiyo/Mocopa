@@ -117,56 +117,56 @@ IP AddressにはBlenderが起動しているPCのIPアドレスを，Port Number
 <img src="Assets/Textures/module_thumbnails/slider.png">
 
 ### 概要
-スライダーです．黄色い円状のノブをドラッグしている間，常にノブの位置に応じて0.0~1.0の範囲で値を送信します．
+スライダーです．黄色い円状のノブをドラッグしている間，常にノブの位置に応じて0.0～1.0の範囲で値を送信します．
 
 ### OSCメッセージ
 - ノブをタップしたとき
-  - ( /address_pattern, knob_position(0.0~1.0) )
+  - ( /address_pattern, knob_position(0.0～1.0) )
 - ノブをドラッグしている間
-  - ( /address_pattern, knob_position(0.0~1.0) )
+  - ( /address_pattern, knob_position(0.0～1.0) )
   
 ## Rotary Encoder
 <img src="Assets/Textures/module_thumbnails/rotary.png">
 
 ### 概要
-角度センサです．黄色い針をドラッグして角度(-180~180), 回転量（ひとつ前のOSCメッセージを送信したときの角度との差），モジュールの状態を送信します．
+角度センサです．黄色い針をドラッグして角度(-180～180), 回転量（ひとつ前のOSCメッセージを送信したときの角度との差），モジュールの状態を送信します．
 ロータリスイッチとしても使用できそうです．
 
 ### OSCメッセージ
 - 針に触れたとき
-  - ( /address_pattern, Angle(-180.0~180.0), 0.0, 1.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), 0.0, 1.0 )
 - 針のドラッグ開始時
-  - ( /address_pattern, Angle(-180.0~180.0), 0.0, 2.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), 0.0, 2.0 )
 - 針をドラッグしている間
-  - ( /address_pattern, Angle(-180.0~180.0), delta_angle(-180.0~180.0), 0.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), delta_angle(-180.0～180.0), 0.0 )
 - 針のドラッグ終了時
-  - ( /address_pattern, Angle(-180.0~180.0), delta_angle(-180.0~180.0), 3.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), delta_angle(-180.0～180.0), 3.0 )
 - 針から指を離したとき
-  - ( /address_pattern, Angle(-180.0~180.0), 0.0, 4.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), 0.0, 4.0 )
 
 ## Joystick
 <img src="Assets/Textures/module_thumbnails/joystick.png">
 
 ### 概要
-ジョイスティックです．黄色い円状のスティックをドラッグしている間，角度(-180~180)，モジュール中心とスティックとの距離（0.0~1.0）,モジュールの状態を送信します．
+ジョイスティックです．黄色い円状のスティックをドラッグしている間，角度(-180～180)，モジュール中心とスティックとの距離（0.0～1.0）,モジュールの状態を送信します．
 
 ### OSCメッセージ
 - スティックに触れたとき
-  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 1.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), distance(0.0～1.0), 1.0 )
 - スティックのドラッグ開始時
-  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 2.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), distance(0.0～1.0), 2.0 )
 - スティックをドラッグしている間
-  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 0.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), distance(0.0～1.0), 0.0 )
 - スティックのドラッグ終了時
-  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 3.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), distance(0.0～1.0), 3.0 )
 - スティックから指を離したとき
-  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 4.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), distance(0.0～1.0), 4.0 )
   
 特殊な挙動として，距離が0.2になった瞬間にだけ送信するメッセージがあります．
 - ひとつ前に送信した距離 ≦ 0.2 ≦ 現在の距離 のとき
-  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 5.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), distance(0.0～1.0), 5.0 )
 - 現在の距離 ≦ 0.2 ≦ ひとつ前に送信した距離 のとき 
-  - ( /address_pattern, Angle(-180.0~180.0), distance(0.0~1.0), 6.0 )
+  - ( /address_pattern, Angle(-180.0～180.0), distance(0.0～1.0), 6.0 )
   
 
 # Others
